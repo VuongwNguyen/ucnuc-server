@@ -33,12 +33,14 @@ class Connection {
 
   async sync(force = false, alter = true) {
     try {
-      await this._instance.sync({ force, alter });
-      console.log(
-        `all models were synchronized successfully! ${
-          force ? "(force: true)" : ""
-        } ${alter ? "(alter: true)" : ""}`
-      );
+      if (force || alter) {
+        await this._instance.sync({ force, alter });
+        console.log(
+          `all models were synchronized successfully! ${
+            force ? "(force: true)" : ""
+          } ${alter ? "(alter: true)" : ""}`
+        );
+      }
     } catch (error) {
       console.error("Error during database sync:", error);
     }
