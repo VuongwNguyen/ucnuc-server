@@ -8,7 +8,11 @@ router.post(
   asyncHandler(AccountController.sendEmail)
 );
 
+router.post("/login", asyncHandler(AccountController.login));
+
 router.post("/verify-email", asyncHandler(AccountController.verifyEmail));
+
+router.post("/renew-token", asyncHandler(AccountController.renewToken));
 
 
 module.exports = router;

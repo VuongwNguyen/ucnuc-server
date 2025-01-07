@@ -14,25 +14,42 @@ class AccountController {
     next();
   }
 
+  async login(req, res, next) {
+    const { email, password } = req.body;
+    const login = await AccountService.login({ email, password });
+
+    return new successfullyResponse({
+      message: "Login successfully",
+      meta: login,
+    }).json(res);
+  }
+
   async sendEmail(req, res, next) {
     const { email } = req.body;
     const sendEmail = await AccountService.sendEmail({ email });
 
-    if (sendEmail)
-      return new successfullyResponse({
-        message: sendEmail.message,
-      }).json(res);
+    return new successfullyResponse({
+      message: sendEmail.message,
+    }).json(res);
   }
 
   async verifyEmail(req, res, next) {
     const { email, otp } = req.body;
     const verifyEmail = await AccountService.verifyEmail({ email, otp });
 
-    if (verifyEmail)
-      return new successfullyResponse({
-        message: "Email verified successfully",
-        meta: verifyEmail,
-      }).json(res);
+    return new successfullyResponse({
+      message: verifyEmail.message,
+    }).json(res);
+  }
+
+  async renewToken(req, res, next) {
+    const { refreshToken } = req.body;
+    const token = await AccountService.renewToken({ refreshToken });
+
+    return new successfullyResponse({
+      message: "Token refreshed",
+      meta: token,
+    }).json(res);
   }
 }
 

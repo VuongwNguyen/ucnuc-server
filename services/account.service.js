@@ -1,8 +1,10 @@
-const { Account } = require("../models");
+const { Account, BlackList } = require("../models");
 const { errorResponse } = require("../util/responseHandle");
 const TokenService = require("./token.service");
 const StoreOTP = require("../util/storeOTP");
 const { sendMail, emailTemplate } = require("../util/mailer");
+const jwt = require("jsonwebtoken");
+const keystoreService = require("./keystore.service");
 
 const verifyEmail = new StoreOTP();
 const resetPassword = new StoreOTP();
@@ -57,7 +59,44 @@ class AccountService {
     };
   }
 
-  async login({ id, password }) {}
+  async login({ email, password }) {
+    const account = await Account.findOne({ where: { email } });
+
+    if (!account)
+      throw new errorResponse({
+        message: "email or password is incorrect",
+        statusCode: 400,
+      });
+
+    const checkPassword = await account.comparePassword(password);
+
+    if (!account || !checkPassword)
+      throw new errorResponse({
+        message: "email or password is incorrect",
+        statusCode: 400,
+      });
+
+    if (!account.verified)
+      throw new errorResponse({
+        message: "Please verify your email",
+        statusCode: 403,
+      });
+
+    const token = TokenService.generateToken({ user_id: account.id });
+
+    await keystoreService.upsertKeyStore({
+      account_id: account.id,
+      current_refresh_token: token.refreshToken,
+    });
+
+    return {
+      id: account.id,
+      fullname: account.fullname,
+      email: account.email,
+      role: account.role,
+      token: token,
+    };
+  }
 
   async sendEmail({ email }) {
     const account = await Account.findOne({ where: { email } });
@@ -109,9 +148,54 @@ class AccountService {
 
     account.verified = true;
     await account.save();
-    const token = TokenService.generateToken({ user_id: account.id });
 
-    return token;
+    return {
+      message: "Email verified successfully",
+    };
+  }
+
+  async renewToken({ refreshToken }) {
+    try {
+      const decoded = jwt.verify(
+        refreshToken,
+        process.env.REFRESH_JWT_SECRET
+      );
+      const user = await Account.findOne({ where: { id: decoded.user_id } });
+      const blacklisted = await BlackList.findOne({
+        where: { refresh_token: refreshToken },
+      });
+      if (!user)
+        throw new errorResponse({
+          message: "something went wrong, please login",
+          statusCode: 403,
+        });
+
+      if (user.current_refresh_token !== refreshToken || blacklisted)
+        // nếu token không khớp hoặc đã bị blacklist
+        throw new errorResponse({
+          message: "something went wrong, please login",
+          statusCode: 403,
+        });
+      const token = TokenService.generateToken({ user_id: user.id });
+
+      await keystoreService.addBlackList({
+        account_id: user.id,
+        new_refresh_token: token.refreshToken,
+        old_refresh_token: refreshToken,
+      });
+      return {
+        id: user.id,
+        fullname: user.fullname,
+        email: user.email,
+        role: user.role,
+        token: token,
+      };
+    } catch (error) {
+      throw new errorResponse({
+        message: "something went wrong, please login",
+        statusCode: 403,
+      });
+    }
   }
 
   async changePassword({ email, password }) {}

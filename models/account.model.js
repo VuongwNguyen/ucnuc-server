@@ -5,7 +5,11 @@ const { nanoid } = require("nanoid");
 
 const sequelize = Connection.getInstance();
 
-class Account extends Model {}
+class Account extends Model {
+  async comparePassword(password) {
+    return await bcrypt.compare(password, this.password);
+  }
+}
 Account.init(
   {
     id: {
@@ -49,12 +53,17 @@ Account.init(
       type: DataTypes.ENUM("admin", "user"),
       defaultValue: "user",
     },
+    current_refresh_token: {
+      type: DataTypes.CHAR(255),
+      allowNull: true,
+    },
   },
   {
     sequelize,
     modelName: "Account",
     updatedAt: false,
     tableName: "accounts",
+    paranoid: true,
   }
 );
 
@@ -62,7 +71,6 @@ Account.addHook("beforeCreate", async (account) => {
   account.password = await bcrypt.hash(account.password, 10);
   const id = nanoid(10); // Tạo ID ngắn độc nhất
   const numericId = BigInt(`0x${Buffer.from(id).toString("hex")}`).toString();
-  console.log(numericId);
   account.id = numericId;
 });
 Account.addHook("beforeUpdate", async (account) => {
