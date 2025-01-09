@@ -50,7 +50,7 @@ class KeystoreService {
 
       const account = await Account.findOne({ where: { id: account_id } });
 
-      if (!account) 
+      if (!account)
         throw new errorResponse({
           message: "Account not found",
           statusCode: 404,
@@ -63,6 +63,32 @@ class KeystoreService {
     } catch (error) {
       await transaction.rollback();
       console.log("Error during adding to blacklist: ", error);
+    }
+  }
+
+  async removeBlackList({ account_id }) {
+    const transaction = await sequelize.transaction();
+    try {
+      await BlackList.destroy({
+        where: { account_id },
+        transaction,
+      });
+
+      const account = await Account.findOne({ where: { id: account_id } });
+
+      if (!account)
+        throw new errorResponse({
+          message: "Account not found",
+          statusCode: 404,
+        });
+
+      account.current_refresh_token = null;
+
+      await account.save({ transaction });
+      return await transaction.commit();
+    } catch (error) {
+      await transaction.rollback();
+      console.log("Error during removing from blacklist: ", error);
     }
   }
 }

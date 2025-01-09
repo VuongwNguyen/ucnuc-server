@@ -22,9 +22,8 @@ Account.init(
       allowNull: false,
     },
     email: {
-      type: DataTypes.STRING(255),
-      allowNull: false,
-      unique: true,
+      type: DataTypes.CHAR(255),
+      // unique: true,
       validate: {
         isEmail: true,
       },
@@ -32,7 +31,7 @@ Account.init(
     phone: {
       type: DataTypes.STRING,
       allowNull: true,
-      unique: true,
+      // unique: true,
       validate: {
         is: /^\+?[0-9]{10}$/i,
       },
