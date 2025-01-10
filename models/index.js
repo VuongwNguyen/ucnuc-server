@@ -3,6 +3,9 @@ const BlackList = require("./blacklist.model");
 const Category = require("./category.model");
 const Product = require("./product.model");
 const Sku = require("./sku.model");
+const Order = require("./order.model");
+const OrderDetail = require("./orderDetail.model");
+const ToppingDetail = require("./toppingDetail.model");
 
 /**
  * ACCOUNT - BLACKLIST
@@ -46,6 +49,48 @@ Sku.belongsTo(Product, {
   onDelete: "CASCADE",
   onUpdate: "CASCADE",
 }); // một sku chỉ thuộc về một product
+/**
+ * ORDER - ACCOUNT
+ */
+Order.belongsTo(Account, {
+  foreignKey: "account_id",
+  onDelete: "RESTRICT",
+  onUpdate: "RESTRICT",
+}); // một order chỉ thuộc về một account
+
+Account.hasMany(Order, {
+  foreignKey: "account_id",
+  onDelete: "RESTRICT",
+  onUpdate: "RESTRICT",
+}); // một account có thể có nhiều order
+/**
+ * ORDER - ORDERDETAIL
+ */
+Order.hasMany(OrderDetail, {
+  foreignKey: "order_id",
+  onDelete: "RESTRICT",
+  onUpdate: "RESTRICT",
+}); // một order có thể có nhiều order detail
+
+OrderDetail.belongsTo(Order, {
+  foreignKey: "order_id",
+  onDelete: "RESTRICT",
+  onUpdate: "RESTRICT",
+}); // một order detail chỉ thuộc về một order
+/**
+ * ORDERDETAIL - TOPPINGDETAIL
+ */
+OrderDetail.hasMany(ToppingDetail, {
+  foreignKey: "order_detail_id",
+  onDelete: "RESTRICT",
+  onUpdate: "RESTRICT",
+}); // một order detail có thể có nhiều topping detail
+
+ToppingDetail.belongsTo(OrderDetail, {
+  foreignKey: "order_detail_id",
+  onDelete: "CASCADE",
+  onUpdate: "CASCADE",
+}); // một topping detail chỉ thuộc về một order detail
 
 module.exports = {
   Account,
@@ -53,4 +98,7 @@ module.exports = {
   Category,
   Product,
   Sku,
+  Order,
+  OrderDetail,
+  ToppingDetail,
 };

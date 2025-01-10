@@ -9,7 +9,7 @@ var app = express();
 
 // Connect to database
 require("./bin/connection").connect();
-require("./bin/connection").sync(false, false);
+require("./bin/connection").sync(false, true);
 
 // View engine setup
 app.use(cors());
