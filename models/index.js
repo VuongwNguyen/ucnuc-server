@@ -6,6 +6,9 @@ const Sku = require("./sku.model");
 const Order = require("./order.model");
 const OrderDetail = require("./orderDetail.model");
 const ToppingDetail = require("./toppingDetail.model");
+const Area = require("./area.model");
+const Table = require("./table.model");
+const Topping = require("./topping.model");
 
 /**
  * ACCOUNT - BLACKLIST
@@ -91,6 +94,20 @@ ToppingDetail.belongsTo(OrderDetail, {
   onDelete: "CASCADE",
   onUpdate: "CASCADE",
 }); // một topping detail chỉ thuộc về một order detail
+/**
+ * AREA - TABLE
+ */
+Area.hasMany(Table, {
+  foreignKey: "area_id",
+  onDelete: "CASCADE",
+  onUpdate: "CASCADE",
+}); // một area có thể có nhiều table
+
+Table.belongsTo(Area, {
+  foreignKey: "area_id",
+  onDelete: "CASCADE",
+  onUpdate: "CASCADE",
+}); // một table chỉ thuộc về một area
 
 module.exports = {
   Account,
@@ -101,4 +118,7 @@ module.exports = {
   Order,
   OrderDetail,
   ToppingDetail,
+  Area,
+  Table,
+  Topping,
 };

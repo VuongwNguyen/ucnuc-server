@@ -1,17 +1,11 @@
 const ProductService = require("../services/product.service");
+const ToppingService = require("../services/topping.service");
 const { successfullyResponse } = require("../util/responseHandle");
 
 class ProductController {
   async createProduct(req, res) {
-    const {
-      category_id,
-      name,
-      description,
-      price,
-      sale_price,
-      type,
-      skus
-    } = req.body;
+    const { category_id, name, description, price, sale_price, type, skus } =
+      req.body;
     const { avatar_url, public_id } = req.body?.image;
 
     const product = await ProductService.createProduct({
@@ -23,7 +17,7 @@ class ProductController {
       type,
       avatar_url,
       public_id,
-      skus
+      skus,
     });
     return new successfullyResponse({
       message: "Product created successfully",
@@ -33,11 +27,40 @@ class ProductController {
   }
 
   async getProducts(req, res) {
-    const { page, limit } = req.query;
-    const products = await ProductService.getProducts({ page, limit });
+    const { page, limit, category_id, keyword } = req.query;
+    const products = await ProductService.getProducts({
+      page,
+      limit,
+      category_id,
+      keyword,
+    });
     return new successfullyResponse({
       message: "Products fetched successfully",
       meta: products,
+    }).json(res);
+  }
+
+  async createTopping(req, res) {
+    const { name, price, sku, type } = req.body;
+    const topping = await ToppingService.createTopping({
+      name,
+      price,
+      sku,
+      type,
+    });
+    return new successfullyResponse({
+      message: "Topping created successfully",
+      meta: topping,
+      statusCode: 201,
+    }).json(res);
+  }
+
+  async getToppings(req, res) {
+    const { type } = req.query;
+    const toppings = await ToppingService.getToppings({ type });
+    return new successfullyResponse({
+      message: "Toppings fetched successfully",
+      meta: toppings,
     }).json(res);
   }
 }

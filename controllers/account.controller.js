@@ -15,8 +15,8 @@ class AccountController {
   }
 
   async login(req, res, next) {
-    const { email, password } = req.body;
-    const login = await AccountService.login({ email, password });
+    const { email, password, admin } = req.body;
+    const login = await AccountService.login({ email, password, admin });
 
     return new successfullyResponse({
       message: "Login successfully",

@@ -1,7 +1,6 @@
 const { Model, DataTypes } = require("sequelize");
 const Connection = require("../bin/connection");
 const bcrypt = require("bcryptjs");
-const { nanoid } = require("nanoid");
 
 const sequelize = Connection.getInstance();
 
@@ -68,9 +67,7 @@ Account.init(
 
 Account.addHook("beforeCreate", async (account) => {
   account.password = await bcrypt.hash(account.password, 10);
-  const id = nanoid(10); // Tạo ID ngắn độc nhất
-  const numericId = BigInt(`0x${Buffer.from(id).toString("hex")}`).toString();
-  account.id = numericId;
+  account.id = Number(String(new Date().getTime()).slice(0, 10));
 });
 Account.addHook("beforeUpdate", async (account) => {
   if (account.changed("password")) {

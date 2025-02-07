@@ -1,27 +1,35 @@
 const { Server } = require("socket.io");
+const OrderService = require("./services/order.service");
 
 let io;
-
+let quantity = 0;
 const socketinitialize = (server) => {
-  io = new Server(server);
-
-  io.use(function (socket, next) {
-    const token = socket.handshake.auth.token;
-    if (isValid(token)) return next();
+  io = new Server(server, {
+    cors: {
+      origin: "*",
+    },
   });
 
-  io.on("connection", (socket) => {
-    console.log("A user connected");
+  // io.use(function (socket, next) {
+  //   const token = socket.handshake.auth.token;
+  //   if (isValid(token)) return next();
+  // });
 
-    // Lắng nghe sự kiện tùy chỉnh
-    socket.on("chat message", (msg) => {
-      console.log("Message received: " + msg);
-      io.emit("chat message", msg); // Gửi lại tin nhắn tới tất cả client
+  io.on("connection", (socket) => {
+    console.log(`A user connected ${socket.id}`);
+    quantity++;
+
+    console.log("quantity", quantity);
+    //  initOrder
+    socket.on("initOrder", async (data) => {
+      const orders = await OrderService.getOrders(data);
+      socket.emit("initOrder", orders);
     });
 
-    // Lắng nghe sự kiện disconnect
     socket.on("disconnect", () => {
-      console.log("A user disconnected");
+      console.log(`A user disconnected ${socket.id}`);
+      quantity--;
+      console.log("quantity", quantity);
     });
   });
 

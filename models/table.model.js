@@ -3,38 +3,31 @@ const Connection = require("../bin/connection");
 
 const sequelize = Connection.getInstance();
 
-class OrderDetail extends Model {
-  getSubTotal() {
-    return this.quantity * this.price;
-  }
-}
+class Table extends Model {}
 
-OrderDetail.init(
+Table.init(
   {
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
     },
-    product_name: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    quantity: {
-      type: DataTypes.INTEGER,
+    status: {
+      type: DataTypes.ENUM("free", "busy"),
       allowNull: false,
-    },
-    price: {
-      type: DataTypes.DECIMAL(10, 2),
-      allowNull: false,
+      defaultValue: "free",
     },
   },
   {
     sequelize,
-    modelName: "orderDetail",
-    tableName: "order_details",
+    modelName: "table",
+    tableName: "tables",
     paranoid: true,
   }
 );
 
-module.exports = OrderDetail;
+module.exports = Table;

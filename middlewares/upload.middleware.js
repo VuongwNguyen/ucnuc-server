@@ -23,6 +23,7 @@ class Upload {
           await cloudinary.uploader.destroy(public_id);
         }
       } catch (error) {
+        console.log(error);
       } finally {
         return next(err);
       }

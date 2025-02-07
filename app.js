@@ -49,7 +49,7 @@ app.use(function (err, req, res, next) {
     statusCode: err.statusCode,
   });
 
-  console.log(err.stack);
+  console.log("lỗi ", err.message, err.stack);
 });
 
 module.exports = app;

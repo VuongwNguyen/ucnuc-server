@@ -1,3 +1,4 @@
+const { Op } = require("sequelize");
 const connection = require("../bin/connection");
 const { Product, Sku } = require("../models");
 const { errorResponse } = require("../util/responseHandle");
@@ -66,14 +67,23 @@ class ProductService {
     return product;
   }
 
-  async getProducts({ page, limit }) {
+  async getProducts({ page, limit, category_id, keyword }) {
     page = parseInt(page, 10) || 1;
     limit = parseInt(limit, 10) || 10;
     if (page < 1) page = 1;
     if (limit < 1) limit = 10;
     const offset = page * limit - limit;
+    if (category_id === "null") category_id = null;
 
     const products = await Product.findAndCountAll({
+      where: {
+        ...(category_id && { category_id }),
+        ...(keyword && {
+          name: {
+            [Op.like]: `%${keyword}%`,
+          },
+        }),
+      },
       limit,
       offset,
       attributes: [

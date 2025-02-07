@@ -59,8 +59,14 @@ class AccountService {
     };
   }
 
-  async login({ email, password }) {
+  async login({ email, password, admin = false }) {
     const account = await Account.findOne({ where: { email } });
+
+    if (admin && account.role !== "admin")
+      throw new errorResponse({
+        message: "Unauthorized",
+        statusCode: 403,
+      });
 
     if (!account)
       throw new errorResponse({

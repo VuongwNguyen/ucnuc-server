@@ -1,0 +1,16 @@
+[
+  {
+    "category_id": 1,
+    "name": "Trà sữa truyền thống",
+    "price": 25000,
+    "sale_price": 0,
+    "type": "sweet"
+  },
+  {
+    "category_id": 2,
+    "name": "Mỳ cay ….",
+    "price": 30000,
+    "sale_price": 0,
+    "type": "savory"
+  }
+]
