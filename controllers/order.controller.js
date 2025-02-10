@@ -17,7 +17,7 @@ class OrderController {
       order_details,
     } = req.body;
 
-    const order = await OrderService.createOrder("1737120037", {
+    const order = await OrderService.createOrder(user_id, {
       table_name,
       payment_method,
       payment_status,
@@ -30,9 +30,7 @@ class OrderController {
 
     if (order) {
       OrderService.getOrders({ page: 1, limit: 10000 }).then((orders) => {
-        console.log("init");
         getIO().emit("initOrder", orders);
-        console.log("end");
       });
     }
 

@@ -29,6 +29,15 @@ class TableAreaController {
       meta: tables,
     }).json(res);
   }
+
+  async createQRCode(req, res) {
+    const { origin, ids } = req.body;
+    const qrCode = await TableAreaService.createQRCode({ origin, ids });
+    return new successfullyResponse({
+      message: "QR Code created successfully",
+      meta: qrCode,
+    }).json(res);
+  }
 }
 
 module.exports = new TableAreaController();

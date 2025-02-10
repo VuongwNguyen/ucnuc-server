@@ -7,5 +7,6 @@ const router = require("express").Router();
 router.post("/create", asyncHandler(TableAreaController.createTable));
 router.get("/:id", asyncHandler(TableAreaController.findTable));
 router.get("/", asyncHandler(TableAreaController.getTables));
+router.post("/createQRCode", asyncHandler(TableAreaController.createQRCode));
 
 module.exports = router;

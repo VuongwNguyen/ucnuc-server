@@ -19,7 +19,12 @@ class OrderService {
     }
   ) {
     const transaction = await sequelize.transaction();
-    const account = await Account.findByPk(account_id);
+    let account = null;
+    if (account_id) {
+      account = await Account.findByPk(account_id);
+    }
+    account = await Account.findOne({ where: { role: "admin" } });
+    
     if (!account)
       throw new errorResponse({
         message: "Account not found",

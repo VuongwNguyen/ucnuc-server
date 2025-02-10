@@ -65,12 +65,26 @@ class TableAreaService {
     return tables;
   }
 
-  async createQRCode({ links = [] }) {
+  async createQRCode({ origin = "", ids = [] }) {
+    if (!origin || ids.length === 0)
+      throw new errorResponse({
+        message: "Origin and ids are required",
+        statusCode: 400,
+      });
+
     const qrCodes = [];
-    for (let i = 0; i < links.length; i++) {
-      const link = links[i];
-      const qrCode = await QRCode.toDataURL(link);
-      qrCodes.push(qrCode);
+    for (let id of ids) {
+      const table = await Table.findByPk(id, {
+        attributes: ["id", "name"],
+        include: {
+          model: Area,
+          attributes: ["id", "name"],
+        },
+      });
+      const url = `${origin}/${id}`;
+      const qrCode = await QRCode.toDataURL(url);
+      table.dataValues.qrCode = qrCode;
+      qrCodes.push(table);
     }
     return qrCodes;
   }
