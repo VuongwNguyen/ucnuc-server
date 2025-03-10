@@ -22,4 +22,12 @@ router.post(
 );
 router.post("/topping", asyncHandler(ProductController.createTopping));
 
+router.put(
+  "/product",
+  uploader.single("image"),
+  asyncHandler(uploadImage.uploadImage),
+  asyncHandler(ProductController.updateProduct),
+  uploadImage.deleteImage
+);
+
 module.exports = router;

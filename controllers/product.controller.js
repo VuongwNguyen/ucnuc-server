@@ -40,6 +40,38 @@ class ProductController {
     }).json(res);
   }
 
+  async updateProduct(req, res) {
+    const {
+      id,
+      category_id,
+      name,
+      description,
+      price,
+      sale_price,
+      type,
+      skus,
+    } = req.body;
+    const { avatar_url, public_id } = req.body?.image;
+
+    const product = await ProductService.updateProduct({
+      id,
+      category_id,
+      name,
+      description,
+      price,
+      sale_price,
+      type,
+      avatar_url,
+      public_id,
+      skus,
+    });
+
+    return new successfullyResponse({
+      message: product.message,
+      statusCode: 200,
+    }).json(res);
+  }
+
   async createTopping(req, res) {
     const { name, price, sku, type } = req.body;
     const topping = await ToppingService.createTopping({

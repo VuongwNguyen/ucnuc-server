@@ -6,10 +6,22 @@ var cors = require("cors");
 var helmet = require("helmet");
 var logger = require("morgan");
 var app = express();
+// const fs = require("fs");
+var winston = require("winston");
 
 // Connect to database
 require("./bin/connection").connect();
 require("./bin/connection").sync(false, true);
+
+// logger setting
+const Logger = winston.createLogger({
+  level: "error",
+  format: winston.format.combine(
+    winston.format.timestamp(),
+    winston.format.json()
+  ),
+  transports: [new winston.transports.File({ filename: "server-log.log" })],
+});
 
 // View engine setup
 app.use(cors());
@@ -41,6 +53,14 @@ app.use(function (err, req, res, next) {
       statusCode: 404,
     });
   }
+  // write error to log file
+  if (err.statusCode === 500)
+    Logger.error({
+      message: err.message,
+      status: err.statusCode,
+      stack: err.stack,
+      timestamp: new Date().toISOString(),
+    });
 
   // Return the error
   res.status(err.statusCode || 500).json({

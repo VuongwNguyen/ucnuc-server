@@ -20,4 +20,12 @@ router.post(
   uploadImage.deleteImage
 );
 
+router.put(
+  "/category",
+  uploader.single("image"),
+  asyncHandler(uploadImage.uploadImage),
+  asyncHandler(CategoryController.updateCategory),
+  uploadImage.deleteImage
+);
+
 module.exports = router;

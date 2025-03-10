@@ -33,7 +33,6 @@ Sku.init(
     sequelize,
     modelName: 'sku',
     tableName: 'skus',
-    paranoid: true,
   }
 );
 

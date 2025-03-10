@@ -30,7 +30,22 @@ class CategoryController {
     }).json(res);
   }
 
-  async updateCategory(req, res, next) {}
+  async updateCategory(req, res, next) {
+    const { id, name, description } = req.body;
+    const { avatar_url, public_id } = req.body?.image;
+
+    const category = await CategoryService.updateCategory({
+      id,
+      name,
+      description,
+      avatar_url,
+      public_id,
+    });
+
+    return new successfullyResponse({
+      message: category.message,
+    }).json(res);
+  }
 
   async deleteCategory(req, res, next) {}
 }

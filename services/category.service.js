@@ -66,8 +66,8 @@ class CategoryService {
     };
   }
 
-  async updateCategory(id, { name, description, avatar_url, public_id }) {
-    return Category.update(
+  async updateCategory({ id, name, description, avatar_url, public_id }) {
+    const categoryUpdate = await Category.update(
       {
         name,
         description,
@@ -76,10 +76,18 @@ class CategoryService {
       },
       { where: { id } }
     );
+
+    if (!categoryUpdate)
+      throw new errorResponse({
+        message: "Error updating category",
+        statusCode: 400,
+      });
+
+    return { message: "Category updated successfully" };
   }
 
   async deleteCategory(id) {
-    return Category.destroy({ where: { id } });
+    return await Category.destroy({ where: { id } });
   }
 }
 

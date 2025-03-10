@@ -62,7 +62,16 @@ class TableAreaService {
       limit,
       offset,
     });
-    return tables;
+    return {
+      list: tables.rows,
+      page: {
+        maxPage: Math.max(Math.ceil(tables.count / limit), 1),
+        currentPage: page,
+        limit,
+        hasNext: page < Math.max(Math.ceil(tables.count / limit), 1),
+        hasPrevious: page > 1,
+      },
+    };
   }
 
   async createQRCode({ origin = "", ids = [] }) {
