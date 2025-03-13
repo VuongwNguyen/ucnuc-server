@@ -8,9 +8,8 @@ class Table extends Model {}
 Table.init(
   {
     id: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.BIGINT,
       primaryKey: true,
-      autoIncrement: true,
     },
     name: {
       type: DataTypes.STRING,
@@ -29,5 +28,9 @@ Table.init(
     paranoid: true,
   }
 );
+
+Table.beforeCreate(async (table, options) => {
+  table.id = Number(String(new Date().getTime()).slice(0, 10));
+});
 
 module.exports = Table;
