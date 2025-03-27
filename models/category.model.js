@@ -8,7 +8,7 @@ class Category extends Model {}
 Category.init(
   {
     id: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.BIGINT,
       primaryKey: true,
       autoIncrement: true,
     },
@@ -36,5 +36,9 @@ Category.init(
     paranoid: true,
   }
 );
+
+Category.beforeCreate(async (category, options) => {
+  category.id = Number(String(new Date().getTime()).slice(0, 10));
+});
 
 module.exports = Category;

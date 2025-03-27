@@ -73,7 +73,7 @@ class ProductService {
     if (page < 1) page = 1;
     if (limit < 1) limit = 10;
     const offset = page * limit - limit;
-    if (category_id === "null") category_id = null;
+    if (category_id == 0) category_id = null;
 
     const products = await Product.findAndCountAll({
       where: {

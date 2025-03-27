@@ -48,7 +48,7 @@ Account.init(
       defaultValue: false,
     },
     role: {
-      type: DataTypes.ENUM("superadmin","admin", "user"),
+      type: DataTypes.ENUM("super_admin","admin", "user"),
       defaultValue: "user",
     },
     current_refresh_token: {

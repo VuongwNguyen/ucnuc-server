@@ -4,8 +4,10 @@ const { protected, adminVerify } = require("../middlewares/protected");
 
 const router = require("express").Router();
 
-router.get("/findTable", asyncHandler(TableAreaController.findTable));
 
+router.get("/findTable", asyncHandler(TableAreaController.findTable));
+// router.use(protected);
+// router.use(adminVerify);
 router.get("/tables", asyncHandler(TableAreaController.getTables));
 router.get("/areas", asyncHandler(TableAreaController.getAreas));
 router.post("/createQRCode", asyncHandler(TableAreaController.createQRCode));

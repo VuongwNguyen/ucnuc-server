@@ -43,9 +43,9 @@ class PaymentService {
     data = {},
     signature = "",
   }) {
-    // console.log("Webhook payment", code, desc, success, data, signature);
-    const order = await Order.findOne({ where: { id: data.orderCode } });
+    console.log("Webhook payment", code, desc, success, data, signature);
 
+    const order = await Order.findOne({ where: { id: data.orderCode } });
     order.payment_method = "card";
     order.payment_status = "completed";
     order.ref_pay = data.reference;
