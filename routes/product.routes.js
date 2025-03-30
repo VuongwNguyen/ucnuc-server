@@ -10,8 +10,8 @@ router.get("/topping", asyncHandler(ProductController.getToppings));
 /**
  * @adminzone - only admin can create product
  */
-// router.use(protected);
-// router.use(adminVerify);
+router.use(protected);
+router.use(adminVerify);
 router.post(
   "/product",
   uploader.single("image"),

@@ -28,7 +28,7 @@ const adminVerify = async (req, res, next) => {
   const { user_id } = req.body;
   const user = await Account.findByPk(user_id);
 
-  if (user?.role !== "admin" || !user.role !== "super_admin")
+  if (user?.role != "admin")
     return next(
       new errorResponse({
         message: "You are not authorized to access this route",

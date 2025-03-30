@@ -202,7 +202,9 @@ class AccountService {
   }
 
   async logout({ user_id }) {
+
     const user = await Account.findOne({ where: { id: user_id } });
+    
 
     if (!user)
       throw new errorResponse({

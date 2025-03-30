@@ -64,9 +64,9 @@ app.use(function (err, req, res, next) {
 
   // Return the error
   res.status(err.statusCode || 500).json({
-    statusResponse: err.statusResponse,
+    statusResponse: err.statusResponse || false,
     message: err.message,
-    statusCode: err.statusCode,
+    statusCode: err.statusCode || 500,
   });
 
   console.log("lỗi ", err.stack);

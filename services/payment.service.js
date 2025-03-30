@@ -26,14 +26,42 @@ class PaymentService {
       cancelUrl: `${origin}/checkout/${orderCode}`,
       returnUrl: `${origin}/checkout/${orderCode}`,
     });
+    console.log("Payment", payment);
 
     if (!payment)
       throw new errorResponse({
         message: "Error creating payment",
-        statusCode: 500,
+        statusCode: 401,
       });
 
-    return payment;
+    // payOS
+    //   .createPaymentLink({
+    //     orderCode: parseInt(orderCode),
+    //     amount,
+    //     items,
+    //     description: `ucnuc-${orderCode}`,
+    //     cancelUrl: `${origin}/checkout/${orderCode}`,
+    //     returnUrl: `${origin}/checkout/${orderCode}`,
+    //   })
+    //   .then((res) => {
+    //     return res;
+    //   })
+    //   .catch((err) => {
+    //     throw new errorResponse({ message: err.message, statusCode: 401 });
+    //   });
+
+    try {
+      payOS.createPaymentLink({
+        orderCode: parseInt(orderCode),
+        amount,
+        items,
+        description: `ucnuc-${orderCode}`,
+        cancelUrl: `${origin}/checkout/${orderCode}`,
+        returnUrl: `${origin}/checkout/${orderCode}`,
+      });
+    } catch (err) {
+      throw new errorResponse({ message: err.message, statusCode: 401 });
+    }
   }
 
   async paymentWebhook({
@@ -44,8 +72,10 @@ class PaymentService {
     signature = "",
   }) {
     console.log("Webhook payment", code, desc, success, data, signature);
-
+    if (data.orderCode === 123) return;
     const order = await Order.findOne({ where: { id: data.orderCode } });
+    if (!order)
+      throw new errorResponse({ message: "Order not found", statusCode: 401 });
     order.payment_method = "card";
     order.payment_status = "completed";
     order.ref_pay = data.reference;

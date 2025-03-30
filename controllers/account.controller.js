@@ -51,6 +51,15 @@ class AccountController {
       meta: token,
     }).json(res);
   }
+
+  async logout(req, res, next) {
+    const { user_id } = req.body;
+    await AccountService.logout({ user_id });
+
+    return new successfullyResponse({
+      message: "Logout successfully",
+    }).json(res);
+  }
 }
 
 module.exports = new AccountController();

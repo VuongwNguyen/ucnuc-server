@@ -14,5 +14,7 @@ router.post("/verify-email", asyncHandler(AccountController.verifyEmail));
 
 router.post("/renew-token", asyncHandler(AccountController.renewToken));
 
+router.post("/logout", asyncHandler(AccountController.logout));
+
 
 module.exports = router;
