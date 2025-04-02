@@ -4,6 +4,7 @@ const { successfullyResponse } = require("../util/responseHandle");
 
 class ProductController {
   async createProduct(req, res) {
+    console.log(req.body);
     const { category_id, name, description, price, sale_price, type, skus } =
       req.body;
     const { avatar_url, public_id } = req.body?.image;

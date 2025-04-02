@@ -161,12 +161,13 @@ class AccountService {
   }
 
   async renewToken({ refreshToken }) {
-    try {
+    // try {
       const decoded = jwt.verify(refreshToken, process.env.REFRESH_JWT_SECRET);
       const user = await Account.findOne({ where: { id: decoded.user_id } });
       const blacklisted = await BlackList.findOne({
         where: { refresh_token: refreshToken },
       });
+      
       if (!user)
         throw new errorResponse({
           message: "something went wrong, please login",
@@ -193,18 +194,16 @@ class AccountService {
         role: user.role,
         token: token,
       };
-    } catch (error) {
-      throw new errorResponse({
-        message: "something went wrong, please login",
-        statusCode: 403,
-      });
-    }
+    // } catch (error) {
+    //   throw new errorResponse({
+    //     message: "something went wrong, please login",
+    //     statusCode: 403,
+    //   });
+    // }
   }
 
   async logout({ user_id }) {
-
     const user = await Account.findOne({ where: { id: user_id } });
-    
 
     if (!user)
       throw new errorResponse({
