@@ -14,5 +14,6 @@ router.post("/createQRCode", asyncHandler(TableAreaController.createQRCode));
 router.post("/createTable", asyncHandler(TableAreaController.createTable));
 router.post("/createArea", asyncHandler(TableAreaController.createArea));
 router.put("/updateTable", asyncHandler(TableAreaController.updateTable));
+router.put("/updateArea", asyncHandler(TableAreaController.updateArea));
 
 module.exports = router;

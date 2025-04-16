@@ -67,6 +67,16 @@ class TableAreaController {
       meta: table,
     }).json(res);
   }
+
+  async updateArea(req, res) {
+    const { id, name } = req.body;
+    const area = await TableAreaService.updateArea({ id, name });
+
+    return new successfullyResponse({
+      message: "Area updated successfully",
+      meta: area,
+    }).json(res);
+  }
 }
 
 module.exports = new TableAreaController();

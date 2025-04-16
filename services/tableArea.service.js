@@ -149,6 +149,20 @@ class TableAreaService {
     await table.save();
     return table;
   }
+
+  async updateArea({ id, name }) {
+    const area = await Area.findByPk(id);
+
+    if (!area)
+      throw new errorResponse({
+        message: "Area not found",
+        statusCode: 404,
+      });
+
+    area.name = name;
+    await area.save();
+    return area;
+  }
 }
 
 module.exports = new TableAreaService();

@@ -44,7 +44,6 @@ class AccountController {
 
   async renewToken(req, res, next) {
     const { refreshToken } = req.body;
-    console.log(req.body);
     const token = await AccountService.renewToken({ refreshToken });
 
     return new successfullyResponse({

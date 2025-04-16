@@ -28,7 +28,6 @@ const adminVerify = async (req, res, next) => {
   const { user_id } = req.body;
   const user = await Account.findByPk(user_id);
 
-  console.log(user_id, user.role);
   if (user?.role != "admin")
     return next(
       new errorResponse({

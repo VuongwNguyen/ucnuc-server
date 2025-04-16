@@ -28,9 +28,11 @@ class ToppingService {
   }
 
   async getToppings({ type }) {
+    if(!type) type = null;
+
     const toppings = await Topping.findAll({
       where: {
-        type,
+        ...(type && { type }),
       },
     });
 
