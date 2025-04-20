@@ -31,7 +31,7 @@ class Connection {
     return this._instance;
   }
 
-  async sync(force = false, alter = true) {
+  async sync(force = false, alter = false) {
     try {
       if (force || alter) {
         await this._instance.sync({ force, alter });

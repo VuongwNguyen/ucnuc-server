@@ -20,7 +20,7 @@ const Logger = winston.createLogger({
     winston.format.timestamp(),
     winston.format.json()
   ),
-  transports: [new winston.transports.File({ filename: "server-log.log" })],
+  transports: [new winston.transports.File({ filename: "logs/server-log.log" })],
 });
 
 // View engine setup
@@ -46,15 +46,15 @@ app.use(function (err, req, res, next) {
   res.locals.message = err.message;
   res.locals.error = req.app.get("env") === "development" ? err : {};
 
-  if (err.status === 404) {
+  if (err.status === 404) 
     return res.status(404).json({
       status: false,
       message: "Not found",
       statusCode: 404,
     });
-  }
+  
   // write error to log file
-  if (err.statusCode === 500)
+  // if (err.statusCode === 500) 
     Logger.error({
       message: err.message,
       status: err.statusCode,

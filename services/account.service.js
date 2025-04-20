@@ -62,7 +62,7 @@ class AccountService {
   async login({ email, password, admin = false }) {
     const account = await Account.findOne({ where: { email } });
 
-    if (admin && account.role !== "admin")
+    if (admin && account.role !== "super_admin" && account.role !== "admin")
       throw new errorResponse({
         message: "Unauthorized",
         statusCode: 403,
@@ -167,7 +167,7 @@ class AccountService {
       const blacklisted = await BlackList.findOne({
         where: { refresh_token: refreshToken },
       });
-      
+
       if (!user)
         throw new errorResponse({
           message: "something went wrong, please login",
