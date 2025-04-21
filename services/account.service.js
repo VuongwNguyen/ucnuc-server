@@ -203,15 +203,8 @@ class AccountService {
   }
 
   async logout({ user_id }) {
-    const user = await Account.findOne({ where: { id: user_id } });
-
-    if (!user)
-      throw new errorResponse({
-        message: "User not found",
-        statusCode: 404,
-      });
-
-    return await keystoreService.removeBlackList({ account_id: user_id });
+    await keystoreService.removeBlackList({ account_id: user_id });
+    return;
   }
 
   async changePassword({ email, password }) {}

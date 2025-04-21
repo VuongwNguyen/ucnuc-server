@@ -22,7 +22,6 @@ const socketinitialize = (server) => {
     console.log("quantity", quantity);
     //  initOrder
     socket.on("initOrder", async (data) => {
-      console.log("initOrder");
       const orders = await OrderService.getOrders(data);
       socket.emit("initOrder", orders);
     });
