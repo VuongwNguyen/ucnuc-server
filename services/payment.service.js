@@ -26,7 +26,6 @@ class PaymentService {
       cancelUrl: `${origin}/checkout/${orderCode}`,
       returnUrl: `${origin}/checkout/${orderCode}`,
     });
-    console.log("Payment", payment);
 
     if (!payment)
       throw new errorResponse({
@@ -34,34 +33,7 @@ class PaymentService {
         statusCode: 401,
       });
 
-    // payOS
-    //   .createPaymentLink({
-    //     orderCode: parseInt(orderCode),
-    //     amount,
-    //     items,
-    //     description: `ucnuc-${orderCode}`,
-    //     cancelUrl: `${origin}/checkout/${orderCode}`,
-    //     returnUrl: `${origin}/checkout/${orderCode}`,
-    //   })
-    //   .then((res) => {
-    //     return res;
-    //   })
-    //   .catch((err) => {
-    //     throw new errorResponse({ message: err.message, statusCode: 401 });
-    //   });
-
-    try {
-      payOS.createPaymentLink({
-        orderCode: parseInt(orderCode),
-        amount,
-        items,
-        description: `ucnuc-${orderCode}`,
-        cancelUrl: `${origin}/checkout/${orderCode}`,
-        returnUrl: `${origin}/checkout/${orderCode}`,
-      });
-    } catch (err) {
-      throw new errorResponse({ message: err.message, statusCode: 401 });
-    }
+    return payment;
   }
 
   async paymentWebhook({
