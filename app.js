@@ -54,7 +54,7 @@ app.use(function (err, req, res, next) {
     });
   
   // write error to log file
-  // if (err.statusCode === 500) 
+  if (err.statusCode === 500) 
     Logger.error({
       message: err.message,
       status: err.statusCode,

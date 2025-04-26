@@ -6,7 +6,7 @@ const { errorResponse } = require("../util/responseHandle");
 async function printBill() {
   let printer = new ThermalPrinter({
     type: Types.EPSON, // Loại máy in (EPSON hoặc STAR, tùy model)
-    interface: `tcp://<địa chỉ IP máy in>:9100`, // Địa chỉ IP và cổng
+    interface: `tcp://192.168.1.250:9100`, // Địa chỉ IP và cổng
     characterSet: "SLOVENIA", // Bộ ký tự (có thể cần điều chỉnh nếu in tiếng Việt)
     removeSpecialCharacters: false, // Giữ ký tự đặc biệt
     lineCharacter: "=", // Ký tự đường kẻ

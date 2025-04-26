@@ -1,6 +1,7 @@
 const { Product, Category, Topping, Sku } = require("../models");
 const prod = require("./product.json");
 const cate = require("./category.json");
+const toppings = require("./topping.json");
 
 function createCategory() {
   Category.bulkCreate(cate, { ignoreDuplicates: true })
@@ -29,6 +30,9 @@ function createProduct() {
         if (item?.skus?.length > 0) {
           const skus = item.skus.map((sku) => {
             sku.product_id = p.id;
+            // tách chữ ra và lấy chữ cuối cùng viết hoa hết
+            const words = sku.name.trim().split(/\s+/);
+            sku.sku = words[words.length - 1].toUpperCase();
             return sku;
           });
           Sku.bulkCreate(skus, { ignoreDuplicates: true })
@@ -48,4 +52,16 @@ function createProduct() {
   });
 }
 
-createProduct();
+// createProduct();
+
+function createTopping() {
+
+  Topping.bulkCreate(toppings, { ignoreDuplicates: true })
+    .then(() => {
+      console.log("Toppings created successfully.");
+    })
+    .catch((error) => {
+      console.error("Error creating toppings:", error);
+    });
+}
+createTopping();
