@@ -2,6 +2,7 @@ const cloudinary = require("../bin/cloudinary");
 class Upload {
   async uploadImage(req, res, next) {
     req.body.image = { public_id: null, avatar_url: null };
+    console.log("upload", req.file);
     if (!req.file) return next();
     const result = await cloudinary.uploader.upload(req.file.path, {
       folder: "ucnucImages",

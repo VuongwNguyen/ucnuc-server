@@ -58,9 +58,7 @@ class OrderController {
 
     if (orders) {
       OrderService.getOrders({ page: 1, limit: 10000 }).then((orders) => {
-        console.log("init");
         getIO().emit("initOrder", orders);
-        console.log("end");
       });
     }
 

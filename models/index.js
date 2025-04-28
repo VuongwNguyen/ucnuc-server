@@ -9,6 +9,8 @@ const ToppingDetail = require("./toppingDetail.model");
 const Area = require("./area.model");
 const Table = require("./table.model");
 const Topping = require("./topping.model");
+const Coupon = require("./coupon.model");
+const Point = require("./point.model");
 
 /**
  * ACCOUNT - BLACKLIST
@@ -121,4 +123,6 @@ module.exports = {
   Area,
   Table,
   Topping,
+  Coupon,
+  Point,
 };

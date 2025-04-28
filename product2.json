@@ -4,63 +4,63 @@
     "price": 30000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE2025021307161767385/photo/menueditor_item_4f9f44d68d634743b3d32117329b6337_1739430907595777907.webp",
-    "category_id": "1745163427"
+    "category_id": "2"
   },
   {
     "name": "khúc bạch chân mèo",
     "price": 34000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE2024080605381139552/photo/menueditor_item_adb99dd9a7094e92a08f772d3d14534b_1722922636021733967.webp",
-    "category_id": "1745163427"
+    "category_id": "2"
   },
   {
     "name": "Chè Thảo Mộc",
     "price": 28000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE2022102505080341397/photo/menueditor_item_35a788a9c95748f78381be5477b9f9d7_1666674473724295379.webp",
-    "category_id": "1745163427"
+    "category_id": "2"
   },
   {
     "name": "Chè bánh flan dừa",
     "price": 32000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084639220971/photo/menueditor_item_0ae5e883321e44efbd95c6a7cf770afb_1666674523218750644.webp",
-    "category_id": "1745163427"
+    "category_id": "2"
   },
   {
     "name": "Chè flan dừa đậu đỏ",
     "price": 38000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084639259992/detail/menueditor_item_87a7914ea1444a0ca2ed5870bd74d015_1662015584453873568.webp",
-    "category_id": "1745163427"
+    "category_id": "2"
   },
   {
     "name": "Chè khúc bạch",
     "price": 30000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084639281248/photo/menueditor_item_507f6d59b6ee4ec5a6362e819e08ee3e_1662015656931163472.webp",
-    "category_id": "1745163427"
+    "category_id": "2"
   },
   {
     "name": "Bánh Flan cafe(2 bánh)",
     "price": 25000,
     "type": "sweet",
     "avatar_url": "",
-    "category_id": "1745163427"
+    "category_id": "2"
   },
   {
     "name": "Bánh Flan",
     "price": 7000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE2023031504353481425/photo/menueditor_item_72d2b50594d94e4a8125e23ce5007aab_1678854925832975384.webp",
-    "category_id": "1745163427"
+    "category_id": "2"
   },
   {
     "name": "Trà Sữa Dalgola",
     "price": 35000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE2025030702420138958/photo/menueditor_item_ff1cef942ba048bda5f874aab1bfb0cb_1741315267570452810.webp",
-    "category_id": "1745163428",
+    "category_id": "3",
     "skus": [
       {
         "name": "Size L",
@@ -73,7 +73,7 @@
     "price": 42000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE2024101810203039780/photo/menueditor_item_16e6559aad864b5fb6ad7c4e88b71656_1729246743822393124.webp",
-    "category_id": "1745163428",
+    "category_id": "3",
     "skus": [
       {
         "name": "Size L",
@@ -86,7 +86,7 @@
     "price": 35000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE2024062803133819763/photo/menueditor_item_a89d10c4794d48f3b766313f04e6d095_1719544319600575839.webp",
-    "category_id": "1745163428",
+    "category_id": "3",
     "skus": [
       {
         "name": "Size L",
@@ -99,42 +99,42 @@
     "price": 37000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE2024011107363017426/photo/menueditor_item_520065a43ac54ccea93601f39b348cd7_1704958584359838660.webp",
-    "category_id": "1745163428"
+    "category_id": "3"
   },
   {
     "name": "Trà Sữa Gạo Lức (Chai 500ml)",
     "price": 50000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE2023113005371667081/photo/menueditor_item_6cf7bf6c3c4f4d6a9b77709d995e4814_1743669076815162737.webp",
-    "category_id": "1745163428"
+    "category_id": "3"
   },
   {
     "name": "Trà Sữa Khoai Môn (Chai 500ml)",
     "price": 50000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE2023113005371667081/photo/menueditor_item_6cf7bf6c3c4f4d6a9b77709d995e4814_1743669076815162737.webp",
-    "category_id": "1745163428"
+    "category_id": "3"
   },
   {
     "name": "Trà Sữa Ô Long (Chai 500ml)",
     "price": 50000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE2023113005371667081/photo/menueditor_item_6cf7bf6c3c4f4d6a9b77709d995e4814_1743669076815162737.webp",
-    "category_id": "1745163428"
+    "category_id": "3"
   },
   {
     "name": "Trà Sữa Truyền Thống (Chai 500ml)",
     "price": 50000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE2023113005371667081/photo/menueditor_item_6cf7bf6c3c4f4d6a9b77709d995e4814_1743669076815162737.webp",
-    "category_id": "1745163428"
+    "category_id": "3"
   },
   {
     "name": "Trà Sữa Thái Xanh",
     "price": 30000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE2023061413544557720/photo/menueditor_item_49d3a9d994754867a579be5082270299_1686750879928507569.webp",
-    "category_id": "1745163428",
+    "category_id": "3",
     "skus": [{ "name": "Size L", "price": 37000 }]
   },
   {
@@ -142,7 +142,7 @@
     "price": 30000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE2023060802035038996/photo/menueditor_item_a624d39375904141959497d04b7340f6_1686189822648326210.webp",
-    "category_id": "1745163428",
+    "category_id": "3",
     "skus": [
       {
         "name": "Size L",
@@ -155,7 +155,7 @@
     "price": 27000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE2023031606214408833/photo/menueditor_item_31abc0eaf9cf457695b640c60be3dd8c_1678947666106477092.webp",
-    "category_id": "1745163428",
+    "category_id": "3",
     "skus": [{ "name": "Size L", "price": 34000 }]
   },
   {
@@ -163,14 +163,14 @@
     "price": 35000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE2023031515095214463/photo/menueditor_item_07402fa6e1a04bb69b6e3a3b1a9f8b71_1678892940027890131.webp",
-    "category_id": "1745163428"
+    "category_id": "3"
   },
   {
     "name": "Trà Sữa Cafe Trân Châu Flan",
     "price": 42000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE2023031512092055305/photo/menueditor_item_f72755cc0f734a93a0d3b1e3c089e67c_1678882155405862406.webp",
-    "category_id": "1745163428",
+    "category_id": "3",
     "skus": [
       {
         "name": "Size L",
@@ -183,7 +183,7 @@
     "price": 39000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE2023031512012480174/photo/menueditor_item_91cf3d3d45f44630ab284dca081325b2_1678881678486011730.webp",
-    "category_id": "1745163428",
+    "category_id": "3",
     "skus": [
       {
         "name": "Size L",
@@ -196,7 +196,7 @@
     "price": 35000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE2023021908291049689/photo/menueditor_item_9c9ec04245e84352b124f46ab47042b3_1678880138446004166.webp",
-    "category_id": "1745163428",
+    "category_id": "3",
     "skus": [
       {
         "name": "Size L",
@@ -209,7 +209,7 @@
     "price": 32000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084640092586/detail/menueditor_item_1bde000e1f4644158b5bb6dee23c2ba4_1678874418916833434.webp",
-    "category_id": "1745163428",
+    "category_id": "3",
     "skus": [
       {
         "name": "Size L",
@@ -222,7 +222,7 @@
     "price": 28000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084640132945/detail/menueditor_item_c26be34001404098be8a15200aa67aac_1678874640310193518.webp",
-    "category_id": "1745163428",
+    "category_id": "3",
     "skus": [
       {
         "name": "Size L",
@@ -235,7 +235,7 @@
     "price": 40000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084640180600/photo/menueditor_item_805f75efd5f144bd824494d76fa22bd6_1678874979607873797.webp",
-    "category_id": "1745163428",
+    "category_id": "3",
     "skus": [
       {
         "name": "Size L",
@@ -248,7 +248,7 @@
     "price": 32000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084640229197/photo/menueditor_item_f6b417559a04431890d9163a7ed9ed0d_1678875147823279104.webp",
-    "category_id": "1745163428",
+    "category_id": "3",
     "skus": [
       {
         "name": "Size L",
@@ -261,7 +261,7 @@
     "price": 45000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084640264822/photo/menueditor_item_a6b546c1fe154eae85fa1707ebeeeffc_1678880356112739352.webp",
-    "category_id": "1745163428",
+    "category_id": "3",
     "skus": [
       {
         "name": "Size L",
@@ -274,7 +274,7 @@
     "price": 30000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084640306991/photo/menueditor_item_59c21938e38d4417bc1fb7bbe45bb655_1678880493047476751.webp",
-    "category_id": "1745163428",
+    "category_id": "3",
     "skus": [
       {
         "name": "Size L",
@@ -287,7 +287,7 @@
     "price": 42000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084641012915/photo/f5bab9ed05574de4b39b80cb686c95fc_1683167962809566188.webp",
-    "category_id": "1745163428",
+    "category_id": "3",
     "skus": [
       {
         "name": "Size L",
@@ -300,7 +300,7 @@
     "price": 39000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084641060034/photo/menueditor_item_3646dccf0b02469d9a323a34c50a40e5_1678880627373103731.webp",
-    "category_id": "1745163428",
+    "category_id": "3",
     "skus": [
       {
         "name": "Size L",
@@ -313,7 +313,7 @@
     "price": 32000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084642326743/photo/menueditor_item_a071cec34af14d57ae881f8fa5f112b5_1678880650366556059.webp",
-    "category_id": "1745163428",
+    "category_id": "3",
     "skus": [
       {
         "name": "Size L",
@@ -326,7 +326,7 @@
     "price": 32000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084642413430/photo/menueditor_item_514ebdc50cf04eb69b5747b64fd56dd7_1678880676011151389.webp",
-    "category_id": "1745163428",
+    "category_id": "3",
     "skus": [
       {
         "name": "Size L",
@@ -339,7 +339,7 @@
     "price": 25000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084642460529/photo/menueditor_item_93a827a5930945c78a5d8b3258eb7682_1678880759445560284.webp",
-    "category_id": "1745163428",
+    "category_id": "3",
     "skus": [
       {
         "name": "Size L",
@@ -352,7 +352,7 @@
     "price": 27000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084643025551/photo/menueditor_item_a38f92fbe9e94239b1563e0936a351a9_1678880795538714524.webp",
-    "category_id": "1745163428",
+    "category_id": "3",
     "skus": [
       {
         "name": "Size L",
@@ -365,7 +365,7 @@
     "price": 30000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084643201963/photo/menueditor_item_65e87a6e10e442bd99831afacd54e286_1678880823886851888.webp",
-    "category_id": "1745163428",
+    "category_id": "3",
     "skus": [
       {
         "name": "Size L",
@@ -378,7 +378,7 @@
     "price": 30000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084643260076/photo/menueditor_item_0911fb43ca2648cc8d1b9ed606fa0023_1678880901544733394.webp",
-    "category_id": "1745163428",
+    "category_id": "3",
     "skus": [
       {
         "name": "Size L",
@@ -391,7 +391,7 @@
     "price": 27000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084643306278/photo/menueditor_item_420100f006514332ab4d8cb0f0e58095_1678880955962710063.webp",
-    "category_id": "1745163428",
+    "category_id": "3",
     "skus": [
       {
         "name": "Size L",
@@ -404,7 +404,7 @@
     "price": 30000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084643358271/photo/menueditor_item_98b49c29f26248d7873b82c3fd4445ba_1678881129499304675.webp",
-    "category_id": "1745163428",
+    "category_id": "3",
     "skus": [
       {
         "name": "Size L",
@@ -417,7 +417,7 @@
     "price": 30000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084643410188/photo/menueditor_item_bd89ca53ed0b43bc9ec89fe021dab8dc_1678881213033023326.webp",
-    "category_id": "1745163428",
+    "category_id": "3",
     "skus": [
       {
         "name": "Size L",
@@ -430,7 +430,7 @@
     "price": 30000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084644036018/photo/menueditor_item_c948d5e8c11247debb978421cd5950ef_1678881244646546959.webp",
-    "category_id": "1745163428",
+    "category_id": "3",
     "skus": [
       {
         "name": "Size L",
@@ -443,7 +443,7 @@
     "price": 30000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084644086037/photo/e9b29c116d804110bf01deead153a635_1683167962797359332.webp",
-    "category_id": "1745163428",
+    "category_id": "3",
     "skus": [
       {
         "name": "Size L",
@@ -456,7 +456,7 @@
     "price": 37000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE2024101810231859240/photo/menueditor_item_cc7163d8ead04b2892061f30d8df194d_1729246848383005110.webp",
-    "category_id": "1745163429",
+    "category_id": "4",
     "skus": [
       {
         "name": "Size L",
@@ -469,42 +469,42 @@
     "price": 39000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE2023032904592636927/photo/menueditor_item_35bc61637fca4690a4dbf25002af8b49_1729226683571805405.webp",
-    "category_id": "1745163429"
+    "category_id": "4"
   },
   {
     "name": "Trà Dâu",
     "price": 35000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE2024022711060812096/photo/menueditor_item_6f949cfd88b2492280bb38905dd8175e_1709031959943534595.webp",
-    "category_id": "1745163429"
+    "category_id": "4"
   },
   {
     "name": "Hồng Trà Ô Mai Cam",
     "price": 35000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE2024012505173613858/photo/menueditor_item_af625ea39f2044d8abb8198c449c9ced_1706159794693618425.webp",
-    "category_id": "1745163429"
+    "category_id": "4"
   },
   {
     "name": "Trà chanh Big Size",
     "price": 25000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084646091632/photo/menueditor_item_006c069e2fd64c5d9d8079f895267212_1678867709427931047.webp",
-    "category_id": "1745163429"
+    "category_id": "4"
   },
   {
     "name": "Trà chanh hạt chia Big Size",
     "price": 30000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084646118885/photo/menueditor_item_d8d9ffb688b1409d9f68bca2d0a27590_1678867759044179880.webp",
-    "category_id": "1745163429"
+    "category_id": "4"
   },
   {
     "name": "Trà vải",
     "price": 28000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084646135395/photo/menueditor_item_302a71bedba64115b399e9c599b6c2d9_1678873889045547911.webp",
-    "category_id": "1745163429",
+    "category_id": "4",
     "skus": [
       {
         "name": "Size L",
@@ -517,7 +517,7 @@
     "price": 32000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084646165741/photo/menueditor_item_939b8cc81a47423ba04b53e30b1f0b00_1678873938117660056.webp",
-    "category_id": "1745163429",
+    "category_id": "4",
     "skus": [
       {
         "name": "Size L",
@@ -530,7 +530,7 @@
     "price": 27000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084646182583/photo/menueditor_item_40b23b276b524759ba9a5abcab64094e_1678874008374630487.webp",
-    "category_id": "1745163429",
+    "category_id": "4",
     "skus": [
       {
         "name": "Size L",
@@ -543,7 +543,7 @@
     "price": 32000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084647023817/photo/menueditor_item_fe7eb0820c3d4e07852c10ada55bea16_1678874224358769631.webp",
-    "category_id": "1745163429",
+    "category_id": "4",
     "skus": [
       {
         "name": "Size L",
@@ -556,56 +556,56 @@
     "price": 35000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084647136859/photo/menueditor_item_36a51a65e4b44044bf9e629d5e14df1a_1678874271566816211.webp",
-    "category_id": "1745163429"
+    "category_id": "4"
   },
   {
     "name": "Trà đào cam hạt chia Big Size",
     "price": 37000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084647153367/photo/menueditor_item_c71140123e2047f1a1381be2595c05ea_1678874311812066483.webp",
-    "category_id": "1745163429"
+    "category_id": "4"
   },
   {
     "name": "Trà đào dưa lưới",
     "price": 37000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084647183242/photo/menueditor_item_0836894c50e540beb196541da415f107_1678874350936308800.webp",
-    "category_id": "1745163429"
+    "category_id": "4"
   },
   {
     "name": "Trà Hibiscus (Atiso Đỏ)",
     "price": 35000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084648029771/photo/menueditor_item_a1f0b08959e8466c8e3e9888f26c900d_1678873705159151169.webp",
-    "category_id": "1745163429"
+    "category_id": "4"
   },
   {
     "name": "Trà trái cây (Táo Cam Dâu)",
     "price": 40000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084648042198/photo/menueditor_item_7c4b820f09af4bad99cb7a76ca99fafd_1678873805523223567.webp",
-    "category_id": "1745163429"
+    "category_id": "4"
   },
   {
     "name": "Hồng trà tắc mật ong",
     "price": 25000,
     "type": "sweet",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084648070148/photo/menueditor_item_16eb9929707d44c58f63c3d66caaf0a5_1678873760438540702.webp",
-    "category_id": "1745163429"
+    "category_id": "4"
   },
   {
     "name": "Bánh Tráng Sốt Me",
     "price": 30000,
     "type": "savory",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE2024121905391959704/photo/menueditor_item_20573313597448a2a7a61bf6a6b52a2d_1734586687954283276.webp",
-    "category_id": "1745163430"
+    "category_id": "5"
   },
   {
     "name": "Bánh gạo cay",
     "price": 35000,
     "type": "savory",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084638379730/photo/menueditor_item_6ae22dc8984745b49d3ab564f75c20a9_1678872836690284632.webp",
-    "category_id": "1745163430",
+    "category_id": "5",
     "skus": [
       {
         "name": "Để Sống",
@@ -618,7 +618,7 @@
     "price": 45000,
     "type": "savory",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084639021257/photo/menueditor_item_f95c346c848b4fed813bf19d72d7f7a7_1678872861822152443.webp",
-    "category_id": "1745163430",
+    "category_id": "5",
     "skus": [
       {
         "name": "Để Sống",
@@ -631,56 +631,56 @@
     "price": 25000,
     "type": "savory",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084639058949/photo/menueditor_item_958cad9ad6424e93a50b2189c30def72_1678872884302780149.webp",
-    "category_id": "1745163430"
+    "category_id": "5"
   },
   {
     "name": "Cá viên chiên",
     "price": 30000,
     "type": "savory",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084639074211/photo/menueditor_item_c5983c2720044cd48f59a9d6795fc83c_1678872979252170692.webp",
-    "category_id": "1745163430"
+    "category_id": "5"
   },
   {
     "name": "Khoai tây lắc phô mai",
     "price": 35000,
     "type": "savory",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084639095116/photo/menueditor_item_5d45b26dd20c4ed2b681c458bef141ed_1678872909435255523.webp",
-    "category_id": "1745163430"
+    "category_id": "5"
   },
   {
     "name": "Xúc xích Đức",
     "price": 30000,
     "type": "savory",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084639152198/photo/menueditor_item_b7a960d044ab45648095b1038762fad3_1678873036482423155.webp",
-    "category_id": "1745163430"
+    "category_id": "5"
   },
   {
     "name": "Khoai tây chiên",
     "price": 25000,
     "type": "savory",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084639177671/photo/menueditor_item_86f44a517bda492fbec8fc29bd144c79_1678873100553378525.webp",
-    "category_id": "1745163430"
+    "category_id": "5"
   },
   {
     "name": "Bánh tráng cuộn",
     "price": 30000,
     "type": "savory",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084639199739/photo/menueditor_item_f4b435e12a2c459895b2e12aef441956_1678872800491173539.webp",
-    "category_id": "1745163430"
+    "category_id": "5"
   },
   {
     "name": "Bánh Nón (6 cái)",
     "price": 49000,
     "type": "savory",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE2023010110323797438/detail/menueditor_item_e1c8166eb9c84a6685745ef5887fdf0e_1672569116274538271.webp",
-    "category_id": "1745163430"
+    "category_id": "5"
   },
   {
     "name": "mì kim chi cá hồi",
     "price": 55000,
     "type": "savory",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE2023052113032015757/photo/menueditor_item_c616bdb75b4b494f98746832f30c3a09_1684674194334544683.webp",
-    "category_id": "1745163431",
+    "category_id": "6",
     "skus": [
       {
         "name": "Cấp 0",
@@ -721,7 +721,7 @@
     "price": 60000,
     "type": "savory",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084638045140/photo/menueditor_item_7f49cc4e0ecd4516a314e885b6e3101c_1678867577938016387.webp",
-    "category_id": "1745163431",
+    "category_id": "6",
     "skus": [
       {
         "name": "Cấp 0",
@@ -762,7 +762,7 @@
     "price": 50000,
     "type": "savory",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084638189580/photo/menueditor_item_88e5803cb8c34bcb90ee00f65bb5e009_1678867494988679227.webp",
-    "category_id": "1745163431",
+    "category_id": "6",
     "skus": [
       {
         "name": "Cấp 0",
@@ -803,7 +803,7 @@
     "price": 60000,
     "type": "savory",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084638086003/photo/menueditor_item_1cf459f63abf4fdaa9b3138691c28e80_1678867468298761158.webp",
-    "category_id": "1745163431",
+    "category_id": "6",
     "skus": [
       {
         "name": "Cấp 0",
@@ -844,7 +844,7 @@
     "price": 45000,
     "type": "savory",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084638137767/photo/menueditor_item_f5ce0bc789654800aa5e6276b2e876c2_1662017244641869368.webp",
-    "category_id": "1745163431",
+    "category_id": "6",
     "skus": [
       {
         "name": "Cấp 0",
@@ -885,7 +885,7 @@
     "price": 60000,
     "type": "savory",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084638229546/photo/menueditor_item_1e4103cb43924708af7a40d30b7f2fda_1678867519305783408.webp",
-    "category_id": "1745163431",
+    "category_id": "6",
     "skus": [
       {
         "name": "Cấp 0",
@@ -926,7 +926,7 @@
     "price": 85000,
     "type": "savory",
     "avatar_url": "https://food-cms.grab.com/compressed_webp/items/VNITE20220621084638274290/photo/menueditor_item_3a3e2fe2475c4873ac1e56f82745cec6_1678867547887958207.webp",
-    "category_id": "1745163431",
+    "category_id": "6",
     "skus": [
       {
         "name": "Cấp 0",

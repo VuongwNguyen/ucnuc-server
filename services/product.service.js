@@ -160,8 +160,9 @@ class ProductService {
     if (price) product.price = price;
     if (sale_price) product.sale_price = sale_price;
     if (type) product.type = type;
-    if (avatar_url) product.avatar_url = avatar_url;
+    if (avatar_url) product.avatar_url = avatar_url; //nếu tồn tại avatar_url thì mới cập nhật
     if (public_id) product.public_id = public_id;
+    console.log(id, avatar_url, product.avatar_url);
 
     if (skus.length > 0) {
       const skusRoot = await Sku.findAll({

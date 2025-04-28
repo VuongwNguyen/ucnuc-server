@@ -1,7 +1,23 @@
 const { Product, Category, Topping, Sku } = require("../models");
-const prod = require("./product.json");
 const cate = require("./category.json");
 const toppings = require("./topping.json");
+
+
+// const fs = require("fs");
+
+let prod = require("./product.json");
+
+// console.log("Before:", prod);
+
+// prod.forEach((item) => {
+//   item.price = item.price - 5000;
+// });
+
+// console.log("After:", prod);
+
+// fs.writeFileSync("./product2.json", JSON.stringify(prod, null, 2), "utf-8");
+
+// console.log("File saved!");
 
 function createCategory() {
   Category.bulkCreate(cate, { ignoreDuplicates: true })
@@ -52,10 +68,9 @@ function createProduct() {
   });
 }
 
-// createProduct();
+createProduct();
 
 function createTopping() {
-
   Topping.bulkCreate(toppings, { ignoreDuplicates: true })
     .then(() => {
       console.log("Toppings created successfully.");
@@ -64,4 +79,4 @@ function createTopping() {
       console.error("Error creating toppings:", error);
     });
 }
-createTopping();
+// createTopping();

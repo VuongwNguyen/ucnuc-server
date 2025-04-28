@@ -42,6 +42,7 @@ class ProductController {
   }
 
   async updateProduct(req, res) {
+    //
     const {
       id,
       category_id,
